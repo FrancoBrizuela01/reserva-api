@@ -12,7 +12,6 @@ namespace ReservaApi.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Precargar algunos servicios en la base de datos
             modelBuilder.Entity<Servicio>().HasData(
                 new Servicio { Id = 1, Nombre = "Peluquería" },
                 new Servicio { Id = 2, Nombre = "Spa" },

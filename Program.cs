@@ -31,7 +31,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Reserva API V1");
-        c.RoutePrefix = string.Empty; // Para que Swagger se abra en la raíz
+        c.RoutePrefix = string.Empty;
     });
 }
 

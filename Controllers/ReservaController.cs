@@ -16,14 +16,12 @@ namespace ReservaApi.Controllers
             _context = context;
         }
 
-        // Obtener todas las reservas
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Reserva>>> GetReservas()
         {
             return await _context.Reservas.ToListAsync();
         }
 
-        // Crear una nueva reserva
         [HttpPost]
         public async Task<ActionResult<Reserva>> PostReserva(Reserva reserva)
         {
@@ -47,7 +45,6 @@ namespace ReservaApi.Controllers
             return CreatedAtAction(nameof(GetReservas), new { id = reserva.Id }, reserva);
         }
 
-        // Obtener todos los servicios desde la base de datos (Corrección: cambiamos la ruta)
         [HttpGet("servicios")]
         public async Task<ActionResult<IEnumerable<Servicio>>> GetServicios()
         {
