@@ -1,4 +1,4 @@
-﻿# Usa la imagen de .NET 8
+# Usa la imagen de .NET 8
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
